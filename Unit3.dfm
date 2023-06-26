@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 281
-  Top = 32
+  Left = 428
+  Top = 85
   Width = 477
   Height = 582
   Caption = 'Tambah Data Orang Tua'
@@ -262,6 +262,7 @@ object Form3: TForm3
     Top = 424
     Width = 425
     Height = 120
+    DataSource = ds3
     TabOrder = 15
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -306,21 +307,27 @@ object Form3: TForm3
     TabOrder = 5
   end
   object ds3: TDataSource
+    DataSet = zqry1
     Left = 40
   end
   object con2: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
+    Connected = True
     HostName = 'localhost'
     Port = 3307
-    Database = 'db_laporan_siswa'
+    Database = 'laporan_siswa'
     User = 'root'
     Protocol = 'mysqld-5'
     LibraryLocation = 'libmysql.dll'
     Left = 72
   end
   object zqry1: TZQuery
+    Connection = con2
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM tabel_ortu')
     Params = <>
     Left = 8
   end

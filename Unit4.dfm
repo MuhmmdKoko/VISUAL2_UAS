@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 473
-  Top = 126
+  Left = 421
+  Top = 115
   Width = 481
   Height = 547
   Caption = 'Tambah Data Wali Kelas'
@@ -243,6 +243,7 @@ object Form4: TForm4
     Top = 392
     Width = 425
     Height = 120
+    DataSource = ds3
     TabOrder = 14
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -276,21 +277,27 @@ object Form4: TForm4
       'Perempuan')
   end
   object ds3: TDataSource
+    DataSet = zqry1
     Left = 40
   end
   object con2: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
+    Connected = True
     HostName = 'localhost'
     Port = 3307
-    Database = 'db_laporan_siswa'
+    Database = 'laporan_siswa'
     User = 'root'
     Protocol = 'mysqld-5'
     LibraryLocation = 'libmysql.dll'
     Left = 72
   end
   object zqry1: TZQuery
+    Connection = con2
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM tabel_wali_kelas')
     Params = <>
     Left = 8
   end

@@ -132,8 +132,8 @@ object Form7: TForm7
     ItemHeight = 13
     TabOrder = 4
     Items.Strings = (
-      'Aktif'
-      'Tidak Aktif')
+      'Prestasi'
+      'Pelanggaran')
   end
   object btn1: TButton
     Left = 24
@@ -180,6 +180,7 @@ object Form7: TForm7
     Top = 264
     Width = 425
     Height = 120
+    DataSource = ds3
     TabOrder = 10
     TitleFont.Charset = DEFAULT_CHARSET
     TitleFont.Color = clWindowText
@@ -188,21 +189,27 @@ object Form7: TForm7
     TitleFont.Style = []
   end
   object ds3: TDataSource
+    DataSet = zqry1
     Left = 40
   end
   object con2: TZConnection
     ControlsCodePage = cGET_ACP
     UTF8StringsAsWideField = False
     AutoEncodeStrings = False
+    Connected = True
     HostName = 'localhost'
     Port = 3307
-    Database = 'db_laporan_siswa'
+    Database = 'laporan_siswa'
     User = 'root'
     Protocol = 'mysqld-5'
-    LibraryLocation = 'libmysql.dll'
+    LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
     Left = 72
   end
   object zqry1: TZQuery
+    Connection = con2
+    Active = True
+    SQL.Strings = (
+      'SELECT * FROM tabel_poin')
     Params = <>
     Left = 8
   end
