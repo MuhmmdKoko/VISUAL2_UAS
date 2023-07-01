@@ -1,6 +1,6 @@
 object Form3: TForm3
-  Left = 428
-  Top = 85
+  Left = 593
+  Top = 46
   Width = 477
   Height = 582
   Caption = 'Tambah Data Orang Tua'

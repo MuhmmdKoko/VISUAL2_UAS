@@ -50,6 +50,7 @@ type
     cbb2: TComboBox;
     cbb3: TComboBox;
     edt7: TEdit;
+    procedure bersih;
   private
     { Private declarations }
   public
@@ -62,5 +63,18 @@ var
 implementation
 
 {$R *.dfm}
+
+{ TForm3 }
+
+procedure TForm3.bersih;
+begin
+edt1.Clear;
+edt2.Clear;
+edt3.Clear;
+edt4.Clear;
+edt5.Clear;
+edt6.Clear;
+edt7.Clear;
+end;
 
 end.
