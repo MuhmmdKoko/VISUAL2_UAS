@@ -67,6 +67,10 @@ type
     procedure posisiawal;
     procedure FormShow(Sender: TObject);
     procedure btn2Click(Sender: TObject);
+    procedure btn3Click(Sender: TObject);
+    procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn4Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -216,4 +220,83 @@ ShowMessage('DATA BARHASIL DISIMPAN!');
 posisiawal;
 end;
 end;
+procedure TForm2.btn3Click(Sender: TObject);
+begin
+if (edt1.Text= '') or (edt2.Text ='') or (edt3.Text= '') or (edt4.Text ='') or (edt13.Text ='') or (cbb1.Text ='') or (edt6.Text ='') or (edt7.Text ='') or (edt8.Text ='') or (edt9.Text ='') or (edt10.Text ='') or (edt11.Text ='') or (cbb2.Text ='') then
+begin
+ShowMessage('INPUTAN WAJIB DIISI!');
+end else
+begin
+ShowMessage('DATA BERHASIL DIUPDATE!'); //UPDATE
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add('Update tabel_siswa set id= "'+edt1.Text+'",nis="'+edt2.Text+'",nama_siswa="'+edt3.Text+'",nik="'+edt4.Text+'",tempat_lahir="'+edt13.Text+'",tanggal_lahir="'+FormatDateTime('yyyy/mm/dd',dtp1.Date)+'",jenkel="'+cbb1.Text+'",tingkat_kelas="'+edt6.Text+'",jurusan="'+edt7.Text+'",wali_kelas="'+edt8.Text+'",alamat="'+edt9.Text+'",telp="'+edt10.Text+'",hp="'+edt11.Text+'",status="'+cbb2.Text+'" where id="'+edt1.Text+'"');
+ZQuery1. ExecSQL;
+
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add('select * from tabel_siswa');
+ZQuery1.Open;
+posisiawal;
+end;
+end;
+procedure TForm2.dbgrd1CellClick(Column: TColumn);
+begin
+edt1.Text:= ZQuery1.Fields[0].AsString; // DBGrid
+edt2.Text:= ZQuery1.Fields[1].AsString;
+edt3.Text:= ZQuery1.Fields[2].AsString;
+edt4.Text:= ZQuery1.Fields[3].AsString;
+edt13.Text:= ZQuery1.Fields[4].AsString;
+dtp1.Date:= ZQuery1.Fields[5].AsDateTime;
+cbb1.Text:= ZQuery1.Fields[6].AsString;
+edt6.Text:= ZQuery1.Fields[7].AsString;
+edt7.Text:= ZQuery1.Fields[8].AsString;
+edt8.Text:= ZQuery1.Fields[9].AsString;
+edt9.Text:= ZQuery1.Fields[10].AsString;
+edt10.Text:= ZQuery1.Fields[11].AsString;
+edt11.Text:= ZQuery1.Fields[12].AsString;
+cbb2.Text:= ZQuery1.Fields[13].AsString;
+edt1.Enabled:= True;
+edt2.Enabled:= True;
+edt3.Enabled:= True;
+edt4.Enabled:= True;
+edt13.Enabled:= True;
+dtp1.Enabled:= True;
+cbb1.Enabled:= True;
+edt6.Enabled:= True;
+edt7.Enabled:= True;
+edt8.Enabled:= True;
+edt9.Enabled:= True;
+edt10.Enabled:= True;
+edt11.Enabled:= True;
+cbb2.Enabled:= True;
+
+btn1.Enabled:= false;
+btn2.Enabled:= False;
+btn3.Enabled:= True;
+btn4.Enabled:= True;
+btn5.Enabled:= True;
+end;
+
+procedure TForm2.btn4Click(Sender: TObject);
+begin
+if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add(' delete from tabel_siswa where id="'+edt1.Text+'"');
+ZQuery1. ExecSQL;
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add('select * from tabel_siswa');
+ZQuery1.Open;
+ShowMessage('DATA BERHASIL DIHAPUS');
+posisiawal;
+end else
+begin
+ShowMessage('DATA BATAL DIHAPUS');
+posisiawal;
+end;
+end;
+procedure TForm2.btn5Click(Sender: TObject);
+begin
+bersih;
+end;
+
 end.

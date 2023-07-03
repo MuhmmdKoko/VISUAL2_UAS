@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 334
-  Top = 160
+  Left = 212
+  Top = 174
   Width = 921
   Height = 522
   Caption = 'Tambah Data Siswa'
@@ -293,6 +293,7 @@ object Form2: TForm2
     Height = 49
     Caption = 'UBAH'
     TabOrder = 16
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 536
@@ -301,6 +302,7 @@ object Form2: TForm2
     Height = 49
     Caption = 'HAPUS'
     TabOrder = 17
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 624
@@ -309,6 +311,7 @@ object Form2: TForm2
     Height = 49
     Caption = 'BATAL'
     TabOrder = 18
+    OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
     Left = 16
@@ -322,6 +325,7 @@ object Form2: TForm2
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object edt7: TEdit
     Left = 568
