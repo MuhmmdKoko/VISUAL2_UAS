@@ -220,6 +220,7 @@ ShowMessage('DATA BARHASIL DISIMPAN!');
 posisiawal;
 end;
 end;
+
 procedure TForm2.btn3Click(Sender: TObject);
 begin
 if (edt1.Text= '') or (edt2.Text ='') or (edt3.Text= '') or (edt4.Text ='') or (edt13.Text ='') or (cbb1.Text ='') or (edt6.Text ='') or (edt7.Text ='') or (edt8.Text ='') or (edt9.Text ='') or (edt10.Text ='') or (edt11.Text ='') or (cbb2.Text ='') then
@@ -238,6 +239,7 @@ ZQuery1.Open;
 posisiawal;
 end;
 end;
+
 procedure TForm2.dbgrd1CellClick(Column: TColumn);
 begin
 edt1.Text:= ZQuery1.Fields[0].AsString; // DBGrid
@@ -294,9 +296,10 @@ ShowMessage('DATA BATAL DIHAPUS');
 posisiawal;
 end;
 end;
+
 procedure TForm2.btn5Click(Sender: TObject);
 begin
-bersih;
+posisiawal;
 end;
 
 end.

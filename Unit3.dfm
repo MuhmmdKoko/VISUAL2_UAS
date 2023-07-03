@@ -1,8 +1,8 @@
 object Form3: TForm3
-  Left = 593
-  Top = 47
-  Width = 477
-  Height = 581
+  Left = 734
+  Top = 16
+  Width = 556
+  Height = 653
   Caption = 'Tambah Data Orang Tua'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -51,14 +51,14 @@ object Form3: TForm3
   end
   object lbl5: TLabel
     Left = 16
-    Top = 144
+    Top = 240
     Width = 61
     Height = 13
     Caption = 'PENDIDIKAN'
   end
   object lbl6: TLabel
     Left = 16
-    Top = 176
+    Top = 144
     Width = 57
     Height = 13
     Caption = 'PEKERJAAN'
@@ -72,7 +72,7 @@ object Form3: TForm3
   end
   object lbl8: TLabel
     Left = 16
-    Top = 240
+    Top = 176
     Width = 40
     Height = 13
     Caption = 'ALAMAT'
@@ -107,14 +107,14 @@ object Form3: TForm3
   end
   object lbl13: TLabel
     Left = 97
-    Top = 144
+    Top = 240
     Width = 4
     Height = 13
     Caption = ':'
   end
   object lbl14: TLabel
     Left = 97
-    Top = 176
+    Top = 144
     Width = 4
     Height = 13
     Caption = ':'
@@ -128,7 +128,7 @@ object Form3: TForm3
   end
   object lbl16: TLabel
     Left = 97
-    Top = 240
+    Top = 176
     Width = 4
     Height = 13
     Caption = ':'
@@ -234,6 +234,7 @@ object Form3: TForm3
     Height = 49
     Caption = 'SIMPAN'
     TabOrder = 11
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 200
@@ -242,6 +243,7 @@ object Form3: TForm3
     Height = 49
     Caption = 'UBAH'
     TabOrder = 12
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 288
@@ -250,6 +252,7 @@ object Form3: TForm3
     Height = 49
     Caption = 'HAPUS'
     TabOrder = 13
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 376
@@ -258,12 +261,13 @@ object Form3: TForm3
     Height = 49
     Caption = 'BATAL'
     TabOrder = 14
+    OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
     Left = 24
     Top = 424
     Width = 425
-    Height = 120
+    Height = 185
     DataSource = ds3
     TabOrder = 15
     TitleFont.Charset = DEFAULT_CHARSET
@@ -271,6 +275,7 @@ object Form3: TForm3
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object edt6: TEdit
     Left = 120
@@ -309,7 +314,7 @@ object Form3: TForm3
     TabOrder = 5
   end
   object ds3: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 40
   end
   object con2: TZConnection
@@ -325,7 +330,7 @@ object Form3: TForm3
     LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
     Left = 72
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con2
     Active = True
     SQL.Strings = (
