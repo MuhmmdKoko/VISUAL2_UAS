@@ -1,8 +1,8 @@
 object Form4: TForm4
-  Left = 558
-  Top = 83
+  Left = 793
+  Top = 40
   Width = 481
-  Height = 547
+  Height = 574
   Caption = 'Tambah Data Wali Kelas'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -11,6 +11,7 @@ object Form4: TForm4
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -189,14 +190,14 @@ object Form4: TForm4
   end
   object cbb1: TComboBox
     Left = 120
-    Top = 304
+    Top = 144
     Width = 321
     Height = 21
     ItemHeight = 13
-    TabOrder = 8
+    TabOrder = 3
     Items.Strings = (
-      'Aktif'
-      'Tidak Aktif')
+      'Perempuan'
+      'Laki - laki')
   end
   object btn1: TButton
     Left = 24
@@ -205,6 +206,7 @@ object Form4: TForm4
     Height = 49
     Caption = 'BARU'
     TabOrder = 9
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 112
@@ -213,6 +215,7 @@ object Form4: TForm4
     Height = 49
     Caption = 'SIMPAN'
     TabOrder = 10
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 200
@@ -221,6 +224,7 @@ object Form4: TForm4
     Height = 49
     Caption = 'UBAH'
     TabOrder = 11
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 288
@@ -229,6 +233,7 @@ object Form4: TForm4
     Height = 49
     Caption = 'HAPUS'
     TabOrder = 12
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 376
@@ -237,12 +242,13 @@ object Form4: TForm4
     Height = 49
     Caption = 'BATAL'
     TabOrder = 13
+    OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
     Left = 24
     Top = 392
     Width = 425
-    Height = 120
+    Height = 145
     DataSource = ds3
     TabOrder = 14
     TitleFont.Charset = DEFAULT_CHARSET
@@ -250,6 +256,7 @@ object Form4: TForm4
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object edt7: TEdit
     Left = 120
@@ -267,17 +274,17 @@ object Form4: TForm4
   end
   object cbb2: TComboBox
     Left = 120
-    Top = 144
+    Top = 304
     Width = 321
     Height = 21
     ItemHeight = 13
-    TabOrder = 3
+    TabOrder = 8
     Items.Strings = (
-      'Laki - laki'
-      'Perempuan')
+      'Aktif'
+      'Tidak Aktif')
   end
   object ds3: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 40
   end
   object con2: TZConnection
@@ -290,10 +297,10 @@ object Form4: TForm4
     Database = 'laporan_siswa'
     User = 'root'
     Protocol = 'mysqld-5'
-    LibraryLocation = 'libmysql.dll'
+    LibraryLocation = 'D:\Kuliah\Semester4\Visual2\UAS_VISUAL2_Koko\libmysql.dll'
     Left = 72
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con2
     Active = True
     SQL.Strings = (
