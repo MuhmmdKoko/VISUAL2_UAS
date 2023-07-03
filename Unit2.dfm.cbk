@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 373
-  Top = 278
+  Left = 212
+  Top = 174
   Width = 921
   Height = 522
   Caption = 'Tambah Data Siswa'
@@ -302,6 +302,7 @@ object Form2: TForm2
     Height = 49
     Caption = 'HAPUS'
     TabOrder = 17
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 624
