@@ -1,6 +1,6 @@
 object Form4: TForm4
-  Left = 421
-  Top = 115
+  Left = 558
+  Top = 83
   Width = 481
   Height = 547
   Caption = 'Tambah Data Wali Kelas'

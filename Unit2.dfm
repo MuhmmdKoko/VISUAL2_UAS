@@ -1,8 +1,8 @@
 object Form2: TForm2
-  Left = 235
-  Top = 136
+  Left = 334
+  Top = 160
   Width = 921
-  Height = 523
+  Height = 522
   Caption = 'Tambah Data Siswa'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -284,6 +284,7 @@ object Form2: TForm2
     Height = 49
     Caption = 'SIMPAN'
     TabOrder = 15
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 448
@@ -387,7 +388,7 @@ object Form2: TForm2
       'Tidak Aktif')
   end
   object ds3: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 40
   end
   object con2: TZConnection
@@ -403,7 +404,7 @@ object Form2: TForm2
     LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
     Left = 72
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con2
     Active = True
     SQL.Strings = (

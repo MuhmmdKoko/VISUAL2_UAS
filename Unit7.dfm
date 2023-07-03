@@ -1,6 +1,6 @@
 object Form7: TForm7
-  Left = 464
-  Top = 132
+  Left = 253
+  Top = 109
   Width = 486
   Height = 431
   Caption = 'Tambah Data Poin'

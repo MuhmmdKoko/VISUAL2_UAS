@@ -1,8 +1,8 @@
 object Form3: TForm3
   Left = 593
-  Top = 46
+  Top = 47
   Width = 477
-  Height = 582
+  Height = 581
   Caption = 'Tambah Data Orang Tua'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -12,6 +12,7 @@ object Form3: TForm3
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -224,6 +225,7 @@ object Form3: TForm3
     Height = 49
     Caption = 'BARU'
     TabOrder = 10
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 112
@@ -320,7 +322,7 @@ object Form3: TForm3
     Database = 'laporan_siswa'
     User = 'root'
     Protocol = 'mysqld-5'
-    LibraryLocation = 'libmysql.dll'
+    LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
     Left = 72
   end
   object zqry1: TZQuery

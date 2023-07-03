@@ -58,7 +58,7 @@ type
     lbl29: TLabel;
     ds3: TDataSource;
     con2: TZConnection;
-    zqry1: TZQuery;
+    ZQuery1: TZQuery;
     edt13: TEdit;
     cbb1: TComboBox;
     cbb2: TComboBox;
@@ -66,6 +66,7 @@ type
     procedure bersih;
     procedure posisiawal;
     procedure FormShow(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -149,4 +150,70 @@ begin
 posisiawal;
 end;
 
+procedure TForm2.btn2Click(Sender: TObject);
+begin
+if edt1.Text ='' then
+begin
+ShowMessage('ID SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt2.Text ='' then
+begin
+ShowMessage('NIS SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt3.Text ='' then
+begin
+ShowMessage('NAMA SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt4.Text ='' then
+begin
+ShowMessage('NIK SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt13.Text ='' then
+begin
+ShowMessage('TEMPAT LAHIR SISWA TIDAK BOLEH KOSONG!');
+end else
+if cbb1.Text ='' then
+begin
+ShowMessage('JENIS KELAMIN SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt6.Text ='' then
+begin
+ShowMessage('TINGKAT KELAS SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt7.Text ='' then
+begin
+ShowMessage('JURUSAN SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt8.Text ='' then
+begin
+ShowMessage('WALI KELAS SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt9.Text ='' then
+begin
+ShowMessage('ALAMAT SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt10.Text ='' then
+begin
+ShowMessage('TELPON SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt11.Text ='' then
+begin
+ShowMessage('HP SISWA TIDAK BOLEH KOSONG!');
+end else
+if cbb2.Text ='' then
+begin
+ShowMessage('STATUS SISWA TIDAK BOLEH KOSONG!');
+end else
+begin
+ZQuery1.SQL.Clear; //simpan
+ZQuery1.SQL.Add('insert into tabel_siswa values ("'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt13.Text+'","'+FormatDateTime('yyyy/mm/dd',dtp1.Date)+'","'+cbb1.Text+'","'+edt6.Text+'","'+edt7.Text+'","'+edt8.Text+'","'+edt9.Text+'","'+edt10.Text+'","'+edt11.Text+'","'+cbb2.Text+'")');
+ZQuery1.ExecSQL;
+
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add('select * from tabel_siswa');
+ZQuery1.Open;
+ShowMessage('DATA BARHASIL DISIMPAN!');
+posisiawal;
+end;
+end;
 end.
