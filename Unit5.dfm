@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 456
-  Top = 109
+  Left = 301
+  Top = 125
   Width = 478
   Height = 392
   Caption = 'Tambah Data Kelas'
@@ -11,6 +11,7 @@ object Form5: TForm5
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -117,6 +118,7 @@ object Form5: TForm5
     Height = 49
     Caption = 'BARU'
     TabOrder = 4
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 112
@@ -149,6 +151,7 @@ object Form5: TForm5
     Height = 49
     Caption = 'BATAL'
     TabOrder = 8
+    OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
     Left = 24
@@ -164,7 +167,7 @@ object Form5: TForm5
     TitleFont.Style = []
   end
   object ds3: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 40
   end
   object con2: TZConnection
@@ -180,7 +183,7 @@ object Form5: TForm5
     LibraryLocation = 'libmysql.dll'
     Left = 72
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con2
     Active = True
     SQL.Strings = (
