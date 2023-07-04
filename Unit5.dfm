@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 301
-  Top = 125
+  Left = 855
+  Top = 237
   Width = 478
   Height = 392
   Caption = 'Tambah Data Kelas'
@@ -127,6 +127,7 @@ object Form5: TForm5
     Height = 49
     Caption = 'SIMPAN'
     TabOrder = 5
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 200

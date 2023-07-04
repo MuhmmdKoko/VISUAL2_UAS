@@ -36,6 +36,7 @@ type
     procedure btn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btn5Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -95,6 +96,37 @@ end;
 procedure TForm5.btn5Click(Sender: TObject);
 begin
 posisiawal;
+end;
+
+procedure TForm5.btn2Click(Sender: TObject);
+begin
+if edt1.Text ='' then
+begin
+ShowMessage('ID KELAS TIDAK BOLEH KOSONG!');
+end else
+if edt2.Text ='' then
+begin
+ShowMessage('NAMA SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt3.Text ='' then
+begin
+ShowMessage('JENIS KELAS TIDAK BOLEH KOSONG!');
+end else
+if edt4.Text ='' then
+begin
+ShowMessage('JURUSAN TIDAK BOLEH KOSONG!');
+end else
+begin
+ZQuery1.SQL.Clear; //SIMPAN
+ZQuery1.SQL.Add('insert into tabel_kelas values ("'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'")');
+ZQuery1.ExecSQL;
+
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add('select * from tabel_kelas');
+ZQuery1.Open;
+ShowMessage('DATA BARHASIL DISIMPAN!');
+posisiawal;
+end;
 end;
 
 end.
