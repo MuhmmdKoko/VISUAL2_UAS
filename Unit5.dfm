@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 858
-  Top = 299
+  Left = 400
+  Top = 123
   Width = 478
   Height = 392
   Caption = 'Tambah Data Kelas'
@@ -11,6 +11,7 @@ object Form5: TForm5
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -145,6 +146,7 @@ object Form5: TForm5
     Height = 49
     Caption = 'HAPUS'
     TabOrder = 7
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 376
