@@ -39,6 +39,10 @@ type
     btn8: TButton;
     btn9: TButton;
     btn10: TButton;
+    procedure posisiawal;
+    procedure bersih;
+    procedure btn6Click(Sender: TObject);
+    procedure btn10Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -51,5 +55,53 @@ var
 implementation
 
 {$R *.dfm}
+
+{ TForm6 }
+
+procedure TForm6.bersih;
+begin
+edt1.Clear;
+edt2.Clear;
+edt3.Clear;
+cbb1.Text:='';
+edt4.Clear;
+end;
+
+procedure TForm6.posisiawal;
+begin
+bersih;
+btn1.Enabled:= True;
+btn2.Enabled:= False;
+btn3.Enabled:= False;
+btn4.Enabled:= False;
+btn5.Enabled:= False;
+
+edt1.Enabled:= False;
+edt2.Enabled:= False;
+edt3.Enabled:= False;
+cbb1.Enabled:= False;
+edt4.Enabled:= False;
+end;
+
+procedure TForm6.btn6Click(Sender: TObject);
+begin
+bersih;
+btn1.Enabled:= False;
+btn2.Enabled:= True;
+btn3.Enabled:= False;
+btn4.Enabled:= False;
+btn5.Enabled:= True;
+
+edt1.Enabled:= True;
+edt2.Enabled:= True;
+edt3.Enabled:= True;
+cbb1.Enabled:= True;
+edt4.Enabled:= True;
+end;
+
+procedure TForm6.btn10Click(Sender: TObject);
+begin
+posisiawal;
+end;
 
 end.

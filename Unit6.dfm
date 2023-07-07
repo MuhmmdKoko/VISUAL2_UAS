@@ -11,6 +11,7 @@ object Form6: TForm6
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -195,6 +196,7 @@ object Form6: TForm6
     Height = 49
     Caption = 'BARU'
     TabOrder = 5
+    OnClick = btn6Click
   end
   object btn7: TButton
     Left = 112
@@ -227,6 +229,7 @@ object Form6: TForm6
     Height = 49
     Caption = 'BATAL'
     TabOrder = 9
+    OnClick = btn10Click
   end
   object ds3: TDataSource
     DataSet = zqry1
