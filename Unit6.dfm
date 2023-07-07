@@ -185,6 +185,7 @@ object Form6: TForm6
     Height = 49
     Caption = 'HAPUS'
     TabOrder = 8
+    OnClick = btn9Click
   end
   object btn10: TButton
     Left = 376
