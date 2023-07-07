@@ -1,6 +1,6 @@
 object Form5: TForm5
-  Left = 355
-  Top = 111
+  Left = 858
+  Top = 299
   Width = 478
   Height = 392
   Caption = 'Tambah Data Kelas'
@@ -136,6 +136,7 @@ object Form5: TForm5
     Height = 49
     Caption = 'UBAH'
     TabOrder = 6
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 288
@@ -166,6 +167,7 @@ object Form5: TForm5
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object ds3: TDataSource
     DataSet = ZQuery1
@@ -181,7 +183,7 @@ object Form5: TForm5
     Database = 'laporan_siswa'
     User = 'root'
     Protocol = 'mysqld-5'
-    LibraryLocation = 'libmysql.dll'
+    LibraryLocation = 'D:\Kuliah\Semester4\Visual2\UAS_VISUAL2_Koko\libmysql.dll'
     Left = 72
   end
   object ZQuery1: TZQuery
