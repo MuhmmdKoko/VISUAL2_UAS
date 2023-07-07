@@ -12,6 +12,7 @@ object Form6: TForm6
   Font.Style = []
   OldCreateOrder = False
   Position = poScreenCenter
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -135,46 +136,6 @@ object Form6: TForm6
     Items.Strings = (
       'Kandung'
       'Angkat')
-  end
-  object btn1: TButton
-    Left = 24
-    Top = 304
-    Width = 75
-    Height = 49
-    Caption = 'BARU'
-    TabOrder = 11
-  end
-  object btn2: TButton
-    Left = 112
-    Top = 304
-    Width = 75
-    Height = 49
-    Caption = 'SIMPAN'
-    TabOrder = 12
-  end
-  object btn3: TButton
-    Left = 200
-    Top = 304
-    Width = 75
-    Height = 49
-    Caption = 'UBAH'
-    TabOrder = 13
-  end
-  object btn4: TButton
-    Left = 288
-    Top = 304
-    Width = 75
-    Height = 49
-    Caption = 'HAPUS'
-    TabOrder = 14
-  end
-  object btn5: TButton
-    Left = 376
-    Top = 304
-    Width = 75
-    Height = 49
-    Caption = 'BATAL'
-    TabOrder = 15
   end
   object dbgrd1: TDBGrid
     Left = 24

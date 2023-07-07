@@ -25,11 +25,6 @@ type
     edt3: TEdit;
     edt4: TEdit;
     cbb1: TComboBox;
-    btn1: TButton;
-    btn2: TButton;
-    btn3: TButton;
-    btn4: TButton;
-    btn5: TButton;
     dbgrd1: TDBGrid;
     ds3: TDataSource;
     con2: TZConnection;
@@ -43,6 +38,7 @@ type
     procedure bersih;
     procedure btn6Click(Sender: TObject);
     procedure btn10Click(Sender: TObject);
+    procedure FormShow(Sender: TObject);
   private
     { Private declarations }
   public
@@ -70,11 +66,11 @@ end;
 procedure TForm6.posisiawal;
 begin
 bersih;
-btn1.Enabled:= True;
-btn2.Enabled:= False;
-btn3.Enabled:= False;
-btn4.Enabled:= False;
-btn5.Enabled:= False;
+btn6.Enabled:= True;
+btn7.Enabled:= False;
+btn8.Enabled:= False;
+btn9.Enabled:= False;
+btn10.Enabled:= False;
 
 edt1.Enabled:= False;
 edt2.Enabled:= False;
@@ -86,11 +82,11 @@ end;
 procedure TForm6.btn6Click(Sender: TObject);
 begin
 bersih;
-btn1.Enabled:= False;
-btn2.Enabled:= True;
-btn3.Enabled:= False;
-btn4.Enabled:= False;
-btn5.Enabled:= True;
+btn6.Enabled:= False;
+btn7.Enabled:= True;
+btn8.Enabled:= False;
+btn9.Enabled:= False;
+btn10.Enabled:= True;
 
 edt1.Enabled:= True;
 edt2.Enabled:= True;
@@ -100,6 +96,11 @@ edt4.Enabled:= True;
 end;
 
 procedure TForm6.btn10Click(Sender: TObject);
+begin
+posisiawal;
+end;
+
+procedure TForm6.FormShow(Sender: TObject);
 begin
 posisiawal;
 end;
