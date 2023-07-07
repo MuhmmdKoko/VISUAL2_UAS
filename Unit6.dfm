@@ -1,6 +1,6 @@
 object Form6: TForm6
-  Left = 581
-  Top = 112
+  Left = 365
+  Top = 137
   Width = 479
   Height = 433
   Caption = 'Tambah Data Hubungan'
@@ -149,6 +149,7 @@ object Form6: TForm6
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object btn6: TButton
     Left = 24
@@ -166,6 +167,7 @@ object Form6: TForm6
     Height = 49
     Caption = 'SIMPAN'
     TabOrder = 6
+    OnClick = btn7Click
   end
   object btn8: TButton
     Left = 200
@@ -174,6 +176,7 @@ object Form6: TForm6
     Height = 49
     Caption = 'UBAH'
     TabOrder = 7
+    OnClick = btn8Click
   end
   object btn9: TButton
     Left = 288
@@ -193,7 +196,7 @@ object Form6: TForm6
     OnClick = btn10Click
   end
   object ds3: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 40
   end
   object con2: TZConnection
@@ -209,7 +212,7 @@ object Form6: TForm6
     LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
     Left = 72
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con2
     Active = True
     SQL.Strings = (
