@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 767
-  Top = 91
+  Left = 766
+  Top = 172
   Width = 518
   Height = 553
   Caption = 'Tambah Data Riwayat Poin'
@@ -11,6 +11,7 @@ object Form8: TForm8
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -210,6 +211,7 @@ object Form8: TForm8
     Height = 49
     Caption = 'BARU'
     TabOrder = 9
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 112
@@ -242,6 +244,7 @@ object Form8: TForm8
     Height = 49
     Caption = 'BATAL'
     TabOrder = 13
+    OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
     Left = 24
