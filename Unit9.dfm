@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 433
-  Top = 177
+  Left = 719
+  Top = 152
   Width = 479
   Height = 426
   Caption = 'Tambah Data User'
@@ -11,6 +11,7 @@ object Form9: TForm9
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
   object lbl1: TLabel
@@ -131,6 +132,7 @@ object Form9: TForm9
     Height = 49
     Caption = 'BARU'
     TabOrder = 5
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 112
@@ -163,6 +165,7 @@ object Form9: TForm9
     Height = 49
     Caption = 'BATAL'
     TabOrder = 9
+    OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
     Left = 24

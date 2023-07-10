@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 761
-  Top = 166
+  Left = 611
+  Top = 162
   Width = 518
   Height = 553
   Caption = 'Tambah Data Riwayat Poin'
