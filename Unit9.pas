@@ -42,6 +42,7 @@ type
     procedure btn2Click(Sender: TObject);
     procedure btn3Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
+    procedure btn4Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -178,6 +179,25 @@ btn2.Enabled:= False;
 btn3.Enabled:= True;
 btn4.Enabled:= True;
 btn5.Enabled:= True;
+end;
+
+procedure TForm9.btn4Click(Sender: TObject);
+begin
+if MessageDlg('APAKAH YAKIN MENGHAPUS DATA INI?',mtWarning,[mbYes,mbNo],0)= mryes then
+begin
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add(' delete from tabel_user where id="'+edt1.Text+'"');
+ZQuery1. ExecSQL;
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add('select * from tabel_user');
+ZQuery1.Open;
+ShowMessage('DATA BERHASIL DIHAPUS');
+posisiawal;
+end else
+begin
+ShowMessage('DATA BATAL DIHAPUS');
+posisiawal;
+end;
 end;
 
 end.
