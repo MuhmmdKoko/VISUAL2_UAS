@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 880
-  Top = 186
+  Left = 761
+  Top = 166
   Width = 518
   Height = 553
   Caption = 'Tambah Data Riwayat Poin'
@@ -229,6 +229,7 @@ object Form8: TForm8
     Height = 49
     Caption = 'UBAH'
     TabOrder = 11
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 288
@@ -259,6 +260,7 @@ object Form8: TForm8
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object edt8: TEdit
     Left = 120
