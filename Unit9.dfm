@@ -151,6 +151,7 @@ object Form9: TForm9
     Height = 49
     Caption = 'UBAH'
     TabOrder = 7
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 288
@@ -181,6 +182,7 @@ object Form9: TForm9
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object cbb1: TComboBox
     Left = 120
