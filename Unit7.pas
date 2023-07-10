@@ -34,6 +34,10 @@ type
     ds3: TDataSource;
     con2: TZConnection;
     zqry1: TZQuery;
+    procedure posisiawal;
+    procedure bersih;
+    procedure btn1Click(Sender: TObject);
+    procedure btn5Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -46,5 +50,51 @@ var
 implementation
 
 {$R *.dfm}
+
+procedure TForm7.bersih;
+begin
+edt1.Clear;
+edt2.Clear;
+edt3.Clear;
+edt4.Clear;
+cbb1.Text:='';
+end;
+
+procedure TForm7.btn1Click(Sender: TObject);
+begin
+bersih;
+btn1.Enabled:= False;
+btn2.Enabled:= True;
+btn3.Enabled:= False;
+btn4.Enabled:= False;
+btn5.Enabled:= True;
+
+edt1.Enabled:= True;
+edt2.Enabled:= True;
+edt3.Enabled:= True;
+edt4.Enabled:= True;
+cbb1.Enabled:= True;
+end;
+
+procedure TForm7.posisiawal;
+begin
+bersih;
+btn1.Enabled:= True;
+btn2.Enabled:= False;
+btn3.Enabled:= False;
+btn4.Enabled:= False;
+btn5.Enabled:= False;
+
+edt1.Enabled:= False;
+edt2.Enabled:= False;
+edt3.Enabled:= False;
+edt4.Enabled:= False;
+cbb1.Enabled:= False;
+end;
+
+procedure TForm7.btn5Click(Sender: TObject);
+begin
+posisiawal;
+end;
 
 end.

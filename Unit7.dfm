@@ -1,6 +1,6 @@
 object Form7: TForm7
-  Left = 253
-  Top = 109
+  Left = 794
+  Top = 289
   Width = 486
   Height = 431
   Caption = 'Tambah Data Poin'
@@ -142,6 +142,7 @@ object Form7: TForm7
     Height = 49
     Caption = 'BARU'
     TabOrder = 5
+    OnClick = btn1Click
   end
   object btn2: TButton
     Left = 112
@@ -174,6 +175,7 @@ object Form7: TForm7
     Height = 49
     Caption = 'BATAL'
     TabOrder = 9
+    OnClick = btn5Click
   end
   object dbgrd1: TDBGrid
     Left = 24
