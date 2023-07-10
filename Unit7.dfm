@@ -1,8 +1,8 @@
 object Form7: TForm7
-  Left = 794
-  Top = 289
+  Left = 721
+  Top = 158
   Width = 486
-  Height = 431
+  Height = 427
   Caption = 'Tambah Data Poin'
   Color = clBtnFace
   Font.Charset = DEFAULT_CHARSET
@@ -160,6 +160,7 @@ object Form7: TForm7
     Height = 49
     Caption = 'UBAH'
     TabOrder = 7
+    OnClick = btn3Click
   end
   object btn4: TButton
     Left = 288
@@ -168,6 +169,7 @@ object Form7: TForm7
     Height = 49
     Caption = 'HAPUS'
     TabOrder = 8
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 376
@@ -190,6 +192,7 @@ object Form7: TForm7
     TitleFont.Height = -11
     TitleFont.Name = 'Tahoma'
     TitleFont.Style = []
+    OnCellClick = dbgrd1CellClick
   end
   object ds3: TDataSource
     DataSet = ZQuery1
