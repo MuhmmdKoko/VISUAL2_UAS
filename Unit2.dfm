@@ -1,6 +1,6 @@
 object Form2: TForm2
-  Left = 212
-  Top = 174
+  Left = 167
+  Top = 117
   Width = 921
   Height = 522
   Caption = 'Tambah Data Siswa'

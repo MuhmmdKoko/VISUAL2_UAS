@@ -11,6 +11,7 @@ object Form8: TForm8
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -238,6 +239,7 @@ object Form8: TForm8
     Height = 49
     Caption = 'HAPUS'
     TabOrder = 12
+    OnClick = btn4Click
   end
   object btn5: TButton
     Left = 376
