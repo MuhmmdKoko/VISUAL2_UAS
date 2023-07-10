@@ -1,6 +1,6 @@
 object Form8: TForm8
-  Left = 766
-  Top = 172
+  Left = 880
+  Top = 186
   Width = 518
   Height = 553
   Caption = 'Tambah Data Riwayat Poin'
@@ -220,6 +220,7 @@ object Form8: TForm8
     Height = 49
     Caption = 'SIMPAN'
     TabOrder = 10
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 200
@@ -278,7 +279,7 @@ object Form8: TForm8
       'Tidak Aktif')
   end
   object ds3: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 40
   end
   object con2: TZConnection
@@ -294,7 +295,7 @@ object Form8: TForm8
     LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
     Left = 72
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con2
     Active = True
     SQL.Strings = (

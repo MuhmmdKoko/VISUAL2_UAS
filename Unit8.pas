@@ -41,7 +41,7 @@ type
     dbgrd1: TDBGrid;
     ds3: TDataSource;
     con2: TZConnection;
-    zqry1: TZQuery;
+    ZQuery1: TZQuery;
     lbl18: TLabel;
     lbl19: TLabel;
     edt8: TEdit;
@@ -51,6 +51,7 @@ type
     procedure FormShow(Sender: TObject);
     procedure btn1Click(Sender: TObject);
     procedure btn5Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -124,6 +125,53 @@ end;
 procedure TForm8.btn5Click(Sender: TObject);
 begin
 posisiawal;
+end;
+
+procedure TForm8.btn2Click(Sender: TObject);
+begin
+if edt1.Text ='' then
+begin
+ShowMessage('ID RIWAYAT POIN TIDAK BOLEH KOSONG!');
+end else
+if edt2.Text ='' then
+begin
+ShowMessage('ID SISWA TIDAK BOLEH KOSONG!');
+end else
+if edt3.Text ='' then
+begin
+ShowMessage('ID POIN TIDAK BOLEH KOSONG!');
+end else
+if edt4.Text ='' then
+begin
+ShowMessage('ID WALI TIDAK BOLEH KOSONG!');
+end else
+if edt8.Text ='' then
+begin
+ShowMessage('ID ORTU TIDAK BOLEH KOSONG!');
+end else
+if edt5.Text ='' then
+begin
+ShowMessage('ID KELAS TIDAK BOLEH KOSONG!');
+end else
+if edt6.Text ='' then
+begin
+ShowMessage('SEMESTER TIDAK BOLEH KOSONG!');
+end else
+if cbb1.Text ='' then
+begin
+ShowMessage('STATUS TIDAK BOLEH KOSONG!');
+end else
+begin
+ZQuery1.SQL.Clear; //simpan
+ZQuery1.SQL.Add('insert into tabel_riwayat_poin values ("'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+edt4.Text+'","'+edt8.Text+'","'+edt5.Text+'","'+FormatDateTime('yyyy/mm/dd',dtp1.Date)+'","'+edt6.Text+'","'+cbb1.Text+'")');
+ZQuery1.ExecSQL;
+
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add('select * from tabel_riwayat_poin');
+ZQuery1.Open;
+ShowMessage('DATA BARHASIL DISIMPAN!');
+posisiawal;
+end;
 end;
 
 end.
