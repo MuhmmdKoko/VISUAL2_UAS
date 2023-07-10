@@ -32,13 +32,14 @@ type
     dbgrd1: TDBGrid;
     ds1: TDataSource;
     con1: TZConnection;
-    zqry1: TZQuery;
+    ZQuery1: TZQuery;
     cbb1: TComboBox;
     procedure posisiawal;
     procedure bersih;
     procedure btn1Click(Sender: TObject);
     procedure FormShow(Sender: TObject);
     procedure btn5Click(Sender: TObject);
+    procedure btn2Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -101,6 +102,41 @@ end;
 procedure TForm9.btn5Click(Sender: TObject);
 begin
 posisiawal;
+end;
+
+procedure TForm9.btn2Click(Sender: TObject);
+begin
+if edt1.Text ='' then
+begin
+ShowMessage('ID USER TIDAK BOLEH KOSONG!');
+end else
+if edt2.Text ='' then
+begin
+ShowMessage('NAMA USER TIDAK BOLEH KOSONG!');
+end else
+if edt3.Text ='' then
+begin
+ShowMessage('PASSWORD USER TIDAK BOLEH KOSONG!');
+end else
+if cbb1.Text ='' then
+begin
+ShowMessage('LEVEL USER TIDAK BOLEH KOSONG!');
+end else
+if edt5.Text ='' then
+begin
+ShowMessage('STATUS USER TIDAK BOLEH KOSONG!');
+end else
+begin
+ZQuery1.SQL.Clear; //SIMPAN
+ZQuery1.SQL.Add('insert into tabel_user values ("'+edt1.Text+'","'+edt2.Text+'","'+edt3.Text+'","'+cbb1.Text+'","'+edt5.Text+'")');
+ZQuery1.ExecSQL;
+
+ZQuery1.SQL.Clear;
+ZQuery1.SQL.Add('select * from tabel_user');
+ZQuery1.Open;
+ShowMessage('DATA BARHASIL DISIMPAN!');
+posisiawal;
+end;
 end;
 
 end.

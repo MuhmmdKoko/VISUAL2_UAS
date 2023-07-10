@@ -1,6 +1,6 @@
 object Form9: TForm9
-  Left = 719
-  Top = 152
+  Left = 796
+  Top = 291
   Width = 479
   Height = 426
   Caption = 'Tambah Data User'
@@ -11,6 +11,7 @@ object Form9: TForm9
   Font.Name = 'Tahoma'
   Font.Style = []
   OldCreateOrder = False
+  Position = poScreenCenter
   OnShow = FormShow
   PixelsPerInch = 96
   TextHeight = 13
@@ -141,6 +142,7 @@ object Form9: TForm9
     Height = 49
     Caption = 'SIMPAN'
     TabOrder = 6
+    OnClick = btn2Click
   end
   object btn3: TButton
     Left = 200
@@ -192,7 +194,7 @@ object Form9: TForm9
       'Admin')
   end
   object ds1: TDataSource
-    DataSet = zqry1
+    DataSet = ZQuery1
     Left = 40
   end
   object con1: TZConnection
@@ -208,7 +210,7 @@ object Form9: TForm9
     LibraryLocation = 'C:\Program Files (x86)\Borland\Zeos703\libmysql.dll'
     Left = 72
   end
-  object zqry1: TZQuery
+  object ZQuery1: TZQuery
     Connection = con1
     Active = True
     SQL.Strings = (
