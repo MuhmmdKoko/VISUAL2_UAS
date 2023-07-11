@@ -5,7 +5,8 @@ interface
 uses
   Windows, Messages, SysUtils, Variants, Classes, Graphics, Controls, Forms,
   Dialogs, DB, ZAbstractRODataset, ZAbstractDataset, ZDataset,
-  ZAbstractConnection, ZConnection, Grids, DBGrids, StdCtrls;
+  ZAbstractConnection, ZConnection, Grids, DBGrids, StdCtrls, frxClass,
+  frxDBSet;
 
 type
   TForm6 = class(TForm)
@@ -34,6 +35,9 @@ type
     btn8: TButton;
     btn9: TButton;
     btn10: TButton;
+    btn1: TButton;
+    frxReport1: TfrxReport;
+    frxDBDataset1: TfrxDBDataset;
     procedure posisiawal;
     procedure bersih;
     procedure btn6Click(Sender: TObject);
@@ -43,6 +47,7 @@ type
     procedure btn8Click(Sender: TObject);
     procedure dbgrd1CellClick(Column: TColumn);
     procedure btn9Click(Sender: TObject);
+    procedure btn1Click(Sender: TObject);
   private
     { Private declarations }
   public
@@ -200,6 +205,11 @@ begin
 ShowMessage('DATA BATAL DIHAPUS');
 posisiawal;
 end;
+end;
+
+procedure TForm6.btn1Click(Sender: TObject);
+begin
+frxReport1.ShowReport();
 end;
 
 end.
